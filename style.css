@@ -180,4 +180,40 @@ h1 {
   color: hsl(88, 74%, 48%);;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
+/* 📱 Responsive Fixes for Mobile (below 600px) */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  form,
+  #treeList > div,
+  #leaderboardList {
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px;
+  }
+
+  #treeList img {
+    max-height: 180px;
+  }
+
+  button,
+  input[type="text"],
+  input[type="file"] {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+    padding: 0 10px;
+  }
+}
 
