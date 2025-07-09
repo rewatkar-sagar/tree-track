@@ -4,7 +4,7 @@ document.getElementById('uploadForm').addEventListener('submit', async (e) => {
   const form = document.getElementById('uploadForm');
   const formData = new FormData(form);
 
-  const res = await fetch('http://localhost:4000/upload', {
+  const res = await fetch('https://railway.com/install.sh | sh', {
     method: 'POST',
     body: formData,
   });
