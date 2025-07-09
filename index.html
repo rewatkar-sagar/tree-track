@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TreeTrack</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav style="background: #e0ffe0; padding: 10px;">
+    <a href="index.html" style="margin-right: 15px;">🌱 Upload Tree</a>
+    <a href="trees.html" style="margin-right: 15px;">🖼️ View Trees</a>
+    <a href="leaderboard.html">🏆 Leaderboard</a>
+  </nav>
+  <hr>
+  <h1>🌱 TreeTrack – Upload Tree</h1>
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input type="text" name="userName" placeholder="Your Name" required /><br>
+    <input type="text" name="species" placeholder="Tree Species" required /><br>
+    <input type="text" name="location" placeholder="Location" required /><br>
+    <input type="file" name="treeImage" required /><br><br>
+    <button type="submit">Upload</button>
+  </form>
+ <div id="toast" class="toast"></div>
+ <button id="downloadBtn" style="display: none;">⬇️ Download Voucher</button>
+<script src="main.js"></script>
+</body>
+</html>

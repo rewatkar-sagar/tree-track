@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav style="background: #e0ffe0; padding: 10px;">
+    <a href="index.html" style="margin-right: 15px;">🌱 Upload Tree</a>
+    <a href="trees.html" style="margin-right: 15px;">🖼️ View Trees</a>
+    <a href="leaderboard.html">🏆 Leaderboard</a>
+  </nav>
+  <hr>
+  <h1>🏆 TreeTrack Leaderboard</h1>
+  <ol id="leaderboardList"></ol>
+
+  <script>
+    fetch('http://localhost:4000/trees')
+      .then(res => res.json())
+      .then(data => {
+        const userCount = {};
+
+        // Count uploads per user
+        data.forEach(tree => {
+          const name = tree.userName;
+          if (userCount[name]) {
+            userCount[name]++;
+          } else {
+            userCount[name] = 1;
+          }
+        });
+
+        // Convert to array and sort
+        const sortedUsers = Object.entries(userCount)
+          .sort((a, b) => b[1] - a[1]); // Highest first
+
+        // Show on page
+        const list = document.getElementById('leaderboardList');
+        if (sortedUsers.length === 0) {
+          list.innerHTML = '<p>No data yet.</p>';
+        } else {
+          sortedUsers.forEach(([user, count]) => {
+            const item = document.createElement('li');
+            item.textContent = `${user} - ${count} tree(s)`;
+            list.appendChild(item);
+          });
+        }
+      });
+  </script>
+</body>
+</html>

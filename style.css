@@ -1,0 +1,183 @@
+/* 🌿 General Reset and Body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+
+  background: 
+    linear-gradient(to bottom right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),
+    url('https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=1600&q=80');
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #2f4f2f;
+}
+
+/* 🌱 Navbar */
+nav {
+  background: linear-gradient(to right, #d0f0c0, #a8e6a3);
+  padding: 12px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #145214;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #0a3d0a;
+  text-decoration: underline;
+}
+
+/* Divider */
+hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #c4dec4;
+}
+
+/* ✏️ Form Styling */
+form {
+  max-width: 450px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 25px 30px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input[type="text"],
+input[type="file"] {
+  padding: 10px;
+  border: 1px solid #cddfcc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #3d8b3d;
+  transform: scale(1.03);
+}
+
+/* ✅ Upload Result */
+#result {
+  text-align: center;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+#downloadBtn {
+  margin: 15px auto;
+  display: block;
+}
+
+/* 🖼️ Tree Cards */
+#treeList > div {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+#treeList > div:hover {
+  transform: scale(1.01);
+}
+
+#treeList img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* 🏆 Leaderboard List */
+#leaderboardList {
+  max-width: 500px;
+  margin: 40px auto;
+  padding-left: 0;
+  list-style: decimal inside;
+}
+
+#leaderboardList li {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  font-size: 16px;
+}
+/* 📱 Mobile Styles */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form,
+  #treeList > div,
+  #leaderboardList {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  button,
+  input[type="text"],
+  input[type="file"] {
+    width: 100%;
+  }
+}
+/* 🔔 Toast Message */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+/* 🌿 Main Headings */
+h1 {
+  text-align: left;
+  font-size: 2.2em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: hsl(88, 74%, 48%);;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
