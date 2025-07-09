@@ -27,4 +27,4 @@ TreeTrack is a simple web app that encourages tree planting by allowing users to
 - Tree verification using AI image comparison
 ## 👤 Author
 **Sagar Rewatkar and Toshit Choudhary**  
-GitHub: [@rewatkar-sagar](https://github.com/rewatkar-sagar)
+GitHub: [@rewatkar-sagar](https://github.com/rewatkar-sagar) ,(https://github.com/Toshit1012)
