@@ -17,7 +17,7 @@
   <ol id="leaderboardList"></ol>
 
   <script>
-    fetch('http://localhost:4000/trees')
+    fetch('https://treetrack-backend.onrender.com/trees')
       .then(res => res.json())
       .then(data => {
         const userCount = {};

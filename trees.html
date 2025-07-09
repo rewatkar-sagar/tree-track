@@ -17,7 +17,7 @@
   <div id="treeList"></div>
 
   <script>
-    fetch('http://localhost:4000/trees')
+    fetch('https://treetrack-backend.onrender.com/trees')
       .then(res => res.json())
       .then(data => {
         const container = document.getElementById('treeList');
@@ -30,7 +30,7 @@
             card.style.padding = '10px';
             card.style.marginBottom = '10px';
             card.innerHTML = `
-              <img src="http://localhost:4000${tree.imagePath}" width="200" /><br>
+              <img src="https://treetrack-backend.onrender.com${tree.imagePath}" width="200" /><br>
               <strong>Name:</strong> ${tree.userName} <br>
               <strong>Species:</strong> ${tree.species} <br>
               <strong>Location:</strong> ${tree.location} <br>
